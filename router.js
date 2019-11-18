@@ -29,4 +29,20 @@ router.route('/users/:id')
 });
 
 
+router.get('/getuser', (req, res, nextFunc) =>{
+    console.log('get users middle');
+    throw new Error("token error");
+    nextFunc();
+}, (req, res) =>{
+    res.send("I am okay to be second middle ware");
+});
+
+function logErrors (err, req, res, next) {
+    console.log("err.stack");
+    console.error(err.stack);
+    //next(err);
+    res.status(500).send("error man");
+}
+
+router.use(logErrors)
 module.exports = router;
