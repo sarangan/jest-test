@@ -13,7 +13,7 @@ describe('test mongo connect', () => {
         sandbox.stub(model, 'find').resolves([1,2]);
         
         const connect = await model.find("DB", {});
-
+        console.log(connect);
         assert.deepEqual(connect, [1,2]);
 
         assert(Array.isArray(connect), 'empty arrays are arrays');
