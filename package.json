@@ -11,12 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "express": "^4.17.1",
+    "mocha": "^6.2.2",
     "mongodb": "^3.3.4",
     "mongoose": "^5.7.12",
     "pm2": "^4.1.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
+    "sinon": "^7.5.0",
     "validator": "^12.1.0"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const services = require('./service');
 
 router.route('/users/:id')
 .all( (req, res, next) =>{
@@ -35,6 +36,10 @@ router.get('/getuser', (req, res, nextFunc) =>{
     nextFunc();
 }, (req, res) =>{
     res.send("I am okay to be second middle ware");
+});
+
+router.get('/api/users', (req,res) =>{
+    services.getUsers(req,res);
 });
 
 function logErrors (err, req, res, next) {
