@@ -21,7 +21,7 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
     "sinon": "^7.5.0",
-    "validator": "^12.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "jest": "^24.9.0",
